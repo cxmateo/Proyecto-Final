@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Lost - Zapatillas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>LOST</h1>
+            <p>Zapatillas</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#" id="open-cart">Carrito (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#" id="open-favorites">Favoritos (<span id="favorite-count">0</span>)</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span id="user-display-name">Mi usuario</span> &#9662;</a>
+                    <div class="dropdown-content">
+                        <button id="login-register-btn" class="dropdown-item">Iniciar Sesión / Registro</button>
+                        <button id="logout-btn" class="dropdown-item" style="display: none;">Cerrar Sesión</button>
+                        </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Catálogo</h2>
+        <section class="product-list-wrapper">
+            <div id="product-list" class="product-grid">
+                </div>
+        </section>
+    </main>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart-message">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">$0</span></p>
+            <button id="checkout-btn" class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div id="favorites-sidebar" class="favorites-sidebar">
+        <div class="favorites-header">
+            <h2>Tus Favoritos</h2>
+            <button id="close-favorites" class="close-btn">&times;</button>
+        </div>
+        <div id="favorites-items" class="favorites-items">
+            <p class="empty-favorites-message">No tienes productos en favoritos.</p>
+        </div>
+        <div class="favorites-summary">
+            <button id="clear-favorites-btn" class="clear-favorites-btn">Limpiar Favoritos</button>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close-button">&times;</span>
+            <div class="auth-tabs">
+                <button id="show-login-form" class="auth-tab active">Iniciar Sesión</button>
+                <button id="show-register-form" class="auth-tab">Registrarse</button>
+            </div>
+
+            <div id="login-form" class="auth-form active">
+                <h3>Iniciar Sesión</h3>
+                <form id="login-form-element">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="login-email" required>
+
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+
+                    <button type="submit" class="submit-button">Iniciar Sesión</button>
+                </form>
+            </div>
+
+            <div id="register-form" class="auth-form">
+                <h3>Registrarse</h3>
+                <form id="register-form-element">
+                    <label for="register-name">Nombre:</label>
+                    <input type="text" id="register-name" name="register-name" required>
+
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="register-email" required>
+
+                    <label for="register-password">Contraseña:</label>
+                    <input type="password" id="register-password" name="register-password" required>
+
+                    <label for="register-confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+
+                    <button type="submit" class="submit-button">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="checkout-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-checkout-modal-btn">&times;</span>
+        <h2>Finalizar Compra</h2>
+
+        <div id="checkout-form-container">
+            <form id="billing-form-element" class="checkout-form active">
+                <h3>Datos de Facturación y Pago</h3>
+                <div class="input-group">
+                    <label for="card-number">Número de Tarjeta</label>
+                    <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required>
+                </div>
+                <div class="input-group">
+                    <label for="expiry-date">Fecha de Vencimiento (MM/AA)</label>
+                    <input type="text" id="expiry-date" placeholder="MM/AA" required>
+                </div>
+                <div class="input-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="XXX" required>
+                </div>
+                <button type="submit" class="button primary-button">Siguiente (Datos de Envío)</button>
+            </form>
+
+            <form id="shipping-form-element" class="checkout-form">
+                <h3>Datos de Envío</h3>
+                <div class="input-group">
+                    <label for="address">Dirección de Entrega</label>
+                    <input type="text" id="address" placeholder="Calle Falsa 123" required>
+                </div>
+                <div class="input-group">
+                    <label for="province">Provincia</label>
+                    <input type="text" id="province" placeholder="Buenos Aires" required>
+                </div>
+                <div class="input-group">
+                    <label for="postal-code">Código Postal</label>
+                    <input type="text" id="postal-code" placeholder="B1878" required>
+                </div>
+                <div class="input-group">
+                    <label for="city">Ciudad / Localidad</label>
+                    <input type="text" id="city" placeholder="Quilmes" required>
+                </div>
+                <button type="button" class="button secondary-button" id="back-to-billing">Atrás</button>
+                <button type="submit" class="button primary-button">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 LOST. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>Contacto: contact@lost.com | Tel: +54 9 11 1234-5678</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

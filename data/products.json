@@ -1,0 +1,89 @@
+[
+    {
+        "id": "1",
+        "name": "Zapatillas U Knu Stack",
+        "price": 179000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/8/14/9898880_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/8/14/9898879_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/8/14/9898882_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2024/8/14/9898881_800.jpg"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Zapatillas U MTE Ultrarange 2.0 RW",
+        "price": 169000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/30/10541072_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/30/10541073_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/30/10541075_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/30/10541074_800.jpg"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Zapatillas U Authentic 44 DX",
+        "price": 79000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2021/6_29/0/104/173/6860143.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2021/6_29/0/104/173/6860133.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2021/6_29/0/104/173/6860148.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2021/6_29/0/104/173/6860138.jpg"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Zapatillas U Knu Skool",
+        "price": 189000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/5/5/10759779_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537117_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537119_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537118_800.jpg"
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Zapatillas U Knu Skool",
+        "price": 189000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/5/5/10759728_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537113_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537115_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537114_800.jpg"
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Zapatillas U Speed LS",
+        "price": 159000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537967_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537975_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/28/10537971_800.jpg"
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Zapatillas M Skate 2 Wayvee",
+        "price": 219000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10539031_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10539032_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10539034_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10539033_800.jpg"
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Zapatillas M SKATE HALF CAB",
+        "price": 189000,
+        "images": [
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10538905_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10538906_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10538907_800.jpg",
+            "https://mmgrim2.azureedge.net/MediaFiles/Grimoldi/2025/1/29/10538908_800.jpg"
+        ]
+    }
+]
