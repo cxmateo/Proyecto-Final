@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 16px; /* Base font size for body */
 }
 
 header {
@@ -561,6 +562,8 @@ main {
     transform: translateY(-3px);
 }
 
+/* --- Media Queries for Responsiveness --- */
+
 @media (max-width: 1200px) {
     .product-list-wrapper {
         max-width: 980px;
@@ -571,9 +574,25 @@ main {
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .cart-sidebar.open { /* Ensures sidebars are still reasonable on larger tablets */
+        width: 350px;
+    }
+    .favorites-sidebar.open { /* Ensures sidebars are still reasonable on larger tablets */
+        width: 350px;
+    }
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 15px; /* Slightly smaller base font size for tablets and larger phones */
+    }
+    .header-top h1 {
+        font-size: 2em; /* Smaller header for medium screens */
+    }
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -590,12 +609,12 @@ main {
     }
     .cart-sidebar.open,
     .favorites-sidebar.open {
-        width: 100%;
+        width: 100%; /* Sidebars take full width on smaller screens */
     }
     .cart-item img,
     .favorite-item img {
-        width: 60px;
-        height: 60px;
+        width: 70px; /* Slightly smaller images in sidebars */
+        height: 70px;
     }
     .cart-item-details h4,
     .favorite-item-details h4 {
@@ -603,7 +622,7 @@ main {
     }
     .cart-item-details p,
     .favorite-item-details p {
-        font-size: 0.8em;
+        font-size: 0.85em;
     }
     .footer {
         padding: 15px 0;
@@ -612,16 +631,30 @@ main {
         font-size: 1.3em;
     }
     .checkout-btn {
-        font-size: 1.1em;
+        font-size: 1em;
+        padding: 12px 20px;
     }
     .dropdown-content {
         min-width: 180px;
         right: 0;
         left: auto;
     }
+    .modal-content { /* Adjust modal size for smaller screens */
+        width: 95%;
+        padding: 25px;
+    }
 }
 
 @media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Even smaller base font size for small phones */
+    }
+    .header-top h1 {
+        font-size: 1.8em; /* Even smaller header for tiny screens */
+    }
+    .header-top p {
+        font-size: 0.9em;
+    }
     .navbar ul {
         flex-wrap: wrap;
         flex-direction: column;
@@ -631,16 +664,20 @@ main {
         width: 100%;
         text-align: center;
         padding: 0;
+        border-bottom: 1px solid #333; /* Separator for stacked nav items */
+    }
+    .navbar ul li:last-child {
+        border-bottom: none;
     }
     .navbar ul li a {
-        padding: 10px 0;
+        padding: 12px 0; /* Adjusted padding for stacked links */
     }
     .navbar ul li.dropdown > .dropdown-toggle {
-        padding: 10px 20px;
+        padding: 12px 20px;
         justify-content: center;
     }
     .dropdown-content {
-        position: static;
+        position: static; /* Dropdown content becomes part of the flow */
         width: 100%;
         min-width: unset;
         box-shadow: none;
@@ -649,21 +686,29 @@ main {
         background-color: #333;
     }
     .dropdown:hover .dropdown-content {
-        position: static;
+        position: static; /* Ensure it stays static on hover */
     }
     .dropdown-content .dropdown-item {
         padding: 10px 15px;
         text-align: center;
     }
     .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for products on small phones */
         padding: 0 10px;
+        gap: 15px;
     }
     .product-list-wrapper {
-        padding: 0;
+        padding: 0; /* Remove horizontal padding for full width cards */
     }
     .product-card {
         margin: 0 auto;
+        border-radius: 0; /* Optional: remove card border-radius for full width on screen */
+    }
+    .product-card h3 {
+        font-size: 1em;
+    }
+    .product-card p {
+        font-size: 0.9em;
     }
     .carousel-container {
         height: 180px;
@@ -681,15 +726,45 @@ main {
         height: 8px;
     }
     .product-card .actions {
-        flex-direction: column;
-        gap: 8px;
+        flex-direction: column; /* Esto ya lo tienes, para que se apilen */
+        gap: 8px; /* Espacio entre los botones apilados */
+        padding: 10px; /* Reducir un poco el padding general de las acciones */
     }
+
+@media (max-width: 480px) {
+    /* ... (tus otras reglas para 480px) ... */
+
     .product-card .actions button {
         width: 100%;
+        font-size: 0.8em; /* Un poco más grande que la Opción 1, pero aún pequeño */
+        padding: 8px 5px; /* Ajustar padding */
+        min-height: 45px; /* Necesitará más altura si el texto se envuelve */
+        box-sizing: border-box;
+        white-space: normal; /* Permitir que el texto se envuelva en varias líneas */
+        line-height: 1.2; /* Espacio entre líneas si se envuelve */
+        text-align: center; /* Centrar el texto envuelto */
+        display: flex; /* Asegurar flexbox para el centrado */
+        align-items: center; /* Centrar verticalmente el contenido */
+        justify-content: center; /* Centrar horizontalmente el contenido */
     }
+
+    .product-card .actions button .fas,
+    .product-card .actions button .far,
+    .product-card .actions button svg {
+        font-size: 1em; /* Relativo al font-size del botón */
+        width: 1em;
+        height: 1em;
+        margin-right: 3px;
+        vertical-align: middle;
+    }
+
+    /* ... (resto de tus estilos para 480px) ... */
+}
+
+
     .cart-header h2,
     .favorites-header h2 {
-        font-size: 1.2em;
+        font-size: 1.3em; /* Adjusted header font size for sidebars */
     }
     .close-btn {
         font-size: 1.8em;
@@ -704,18 +779,57 @@ main {
     }
     .cart-summary p {
         font-size: 1.1em;
+        margin-bottom: 10px;
     }
     .checkout-btn,
     .clear-favorites-btn {
-        padding: 10px 15px;
+        padding: 12px 15px; /* Slightly more padding for easier tapping */
+        font-size: 1em;
+    }
+    .cart-item img,
+    .favorite-item img {
+        width: 60px;
+        height: 60px;
+    }
+    .cart-item-details h4,
+    .favorite-item-details h4 {
+        font-size: 0.95em;
+    }
+    .cart-item-details p,
+    .favorite-item-details p {
+        font-size: 0.75em;
+    }
+    .remove-favorite-btn,
+    .add-to-cart-from-favorites-btn {
+        padding: 8px; /* Adjusted padding for smaller buttons */
+        min-width: unset; /* Remove min-width to allow more flexibility */
+        flex-grow: 1; /* Allow buttons to grow equally */
+    }
+    .favorite-item-actions {
+        flex-direction: column; /* Stack favorite item action buttons */
+        gap: 5px;
+        align-items: stretch; /* Stretch buttons to full width */
+    }
+    .modal-content { /* Adjust modal size for very small screens */
+        width: 95%;
+        padding: 20px;
+    }
+    .auth-form input,
+    .input-group input {
+        padding: 12px; /* Larger tap targets for inputs */
+    }
+    .button,
+    .auth-form .submit-button {
+        padding: 12px 15px; /* Larger tap targets for buttons */
         font-size: 1em;
     }
 }
 
+/* Favorites Sidebar */
 .favorites-sidebar {
     position: fixed;
     top: 0;
-    right: -350px;
+    right: -350px; /* Hidden by default */
     width: 350px;
     height: 100%;
     background-color: #fefefe;
@@ -895,6 +1009,7 @@ main {
     transform: translateY(-2px);
 }
 
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -1005,6 +1120,7 @@ main {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Modal (redefined below for consistency, moved here for better cascade) */
 .modal {
     display: none;
     position: fixed;
