@@ -692,7 +692,7 @@ function inicializarCarrusel(card) {
 // Carga los productos del archivo JSON y los muestra
 const cargarProductos = async () => {
     try {
-        const response = await fetch('../data/products.json');
+        const response = await fetch('./data/products.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
