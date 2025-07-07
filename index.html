@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Lost - Zapatillas</title>
     <link rel="stylesheet" href="styles/style.css"> 
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <header> 
+    <header>
         <div class="header-top">
             <h1>LOST</h1>
             <p>Zapatillas</p>
@@ -49,14 +47,9 @@
             <p class="empty-cart-message">Tu carrito está vacío.</p>
         </div>
         <div class="cart-summary">
-<<<<<<< HEAD
         <p>Total: <span id="cart-total">$0</span></p>
         <button class="button primary-button" id="checkout-btn">Finalizar Compra</button>
         <button class="button secondary-button" id="clear-cart-btn" style="display: none;">Vaciar Carrito</button>
-=======
-            <p>Total: <span id="cart-total">$0</span></p>
-            <button id="checkout-btn" class="checkout-btn">Finalizar Compra</button>
->>>>>>> 144051400e390d270a0d3c9caa7edc13a1055eb3
         </div>
     </div>
 
@@ -121,10 +114,9 @@
 
         <div id="checkout-form-container">
             <form id="billing-form-element" class="checkout-form active">
-                <h3>Datos de Facturación y Pago</h3>  
-                <div class="input-group"> 
+                <h3>Datos de Facturación y Pago</h3>
+                <div class="input-group">
                     <label for="card-number">Número de Tarjeta</label>
-<<<<<<< HEAD
                     <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="16" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
                 </div>
                 <div class="input-group">
@@ -134,17 +126,6 @@
                 <div class="input-group">
                     <label for="cvv">CVV</label>
                     <input type="text" id="cvv" placeholder="XXX" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
-=======
-                    <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required>
-                </div>
-                <div class="input-group">
-                    <label for="expiry-date">Fecha de Vencimiento (MM/AA)</label>
-                    <input type="text" id="expiry-date" placeholder="MM/AA" required>
-                </div>
-                <div class="input-group">
-                    <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" placeholder="XXX" required>
->>>>>>> 144051400e390d270a0d3c9caa7edc13a1055eb3
                 </div>
                 <button type="submit" class="button primary-button">Siguiente (Datos de Envío)</button>
             </form>
@@ -152,7 +133,6 @@
             <form id="shipping-form-element" class="checkout-form">
                 <h3>Datos de Envío</h3>
                 <div class="input-group">
-<<<<<<< HEAD
                     <label for="recipient-name">Nombre completo</label>
                     <input type="text" id="recipient-name" placeholder="Nombre completo de la persona que reciba el producto" required>
                 </div>
@@ -161,8 +141,6 @@
                     <input type="text" id="recipient-dni" placeholder="Solo números, sin puntos ni espacios" pattern="[0-9]*" inputmode="numeric" required>
                 </div>
                 <div class="input-group">
-=======
->>>>>>> 144051400e390d270a0d3c9caa7edc13a1055eb3
                     <label for="address">Dirección de Entrega</label>
                     <input type="text" id="address" placeholder="Avenida Siempre viva 123" required>
                 </div>
@@ -198,12 +176,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<<<<<<< HEAD
     <script src="./scripts/script.js" type="module" defer></script> 
 </body>
 </html>
-=======
-    <script src="script.js"></script>
-</body>
-</html>
->>>>>>> 144051400e390d270a0d3c9caa7edc13a1055eb3
